@@ -27,7 +27,7 @@ export async function POST(req) {
 
     // Using the new SDK syntax you successfully tested
     const response = await aiClient.models.generateContent({
-      model: 'gemini-2.5-flash-lite',
+      model: 'gemini-2.5-flash',
       config: { responseMimeType: 'application/json' },
       contents: [
         { role: 'user', parts: [{ text: systemInstruction + `\n\nInput: "${text}"` }] }
